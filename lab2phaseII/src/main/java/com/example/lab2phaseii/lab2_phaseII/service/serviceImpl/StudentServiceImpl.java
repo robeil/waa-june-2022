@@ -1,8 +1,8 @@
-package com.example.lab2phaseii.service.serviceImpl;
+package com.example.lab2phaseii.lab2_phaseII.service.serviceImpl;
 
 import com.example.lab2phaseii.lab2_phaseII.entity.Student;
 import com.example.lab2phaseii.lab2_phaseII.repository.StudentRepo;
-import com.example.lab2phaseii.service.StudentService;
+import com.example.lab2phaseii.lab2_phaseII.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

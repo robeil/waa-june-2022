@@ -1,8 +1,7 @@
-package com.example.lab2phaseii.lab2_phaseII.controller;
+package com.example.labphaseiii.controller;
 
-
-import com.example.lab2phaseii.lab2_phaseII.entity.Student;
-import com.example.lab2phaseii.lab2_phaseII.service.serviceImpl.StudentServiceImpl;
+import com.example.labphaseiii.entity.Student;
+import com.example.labphaseiii.service.serviceImpl.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

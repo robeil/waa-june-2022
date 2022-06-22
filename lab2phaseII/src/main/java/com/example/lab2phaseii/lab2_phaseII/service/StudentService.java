@@ -1,4 +1,4 @@
-package com.example.lab2phaseii.service;
+package com.example.lab2phaseii.lab2_phaseII.service;
 
 import com.example.lab2phaseii.lab2_phaseII.entity.Student;
 

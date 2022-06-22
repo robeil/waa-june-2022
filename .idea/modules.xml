@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/lab2phaseII/lab2phaseII.iml" filepath="$PROJECT_DIR$/lab2phaseII/lab2phaseII.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab2phaseIV/lab2phaseIV.iml" filepath="$PROJECT_DIR$/lab2phaseIV/lab2phaseIV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labphaseIII/labphaseIII.iml" filepath="$PROJECT_DIR$/labphaseIII/labphaseIII.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/waa-june-2022.iml" filepath="$PROJECT_DIR$/.idea/waa-june-2022.iml" />
     </modules>
   </component>
