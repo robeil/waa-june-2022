@@ -1,7 +1,8 @@
-package com.example.labphaseiii.service;
+package com.example.lab2phaseiv.service;
 
-import com.example.labphaseiii.dto.CourseDTO;
-import com.example.labphaseiii.entity.Course;
+
+import com.example.lab2phaseiv.dto.CourseDTO;
+import com.example.lab2phaseiv.entity.Course;
 
 import java.util.List;
 

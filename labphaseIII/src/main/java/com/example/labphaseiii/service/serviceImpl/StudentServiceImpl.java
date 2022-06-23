@@ -11,6 +11,7 @@ import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,38 +28,19 @@ public class StudentServiceImpl implements StudentService {
         this.studentRepo = studentRepo;
     }
 
-
-    private StudentDTO convertEntityToDto(Student student){
-
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.LOOSE);
-        StudentDTO  studentDTO = new StudentDTO();
-        studentDTO = modelMapper.map(student, StudentDTO.class);
-
-        return studentDTO;
-    }
-
-    private Student convertDtoToEntity(StudentDTO studentDTO){
-
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.LOOSE);
-        Student student = new Student();
-        student = modelMapper.map(studentDTO,Student.class);
-
-        return student;
-    }
     @Override
-    public List<Student> getStudentsByMajor(String major) {
+    public List<StudentDTO> getStudentsByMajor(String major) {
 
-//        List<Student> students = new ArrayList<>();
-//
-//        for(Student student : studentRepo.getAllStudents()){
-//            if(student.getMajor().equalsIgnoreCase(major)){
-//                students.add(student);
-//            }
-//        }
-//        return students;
+        List<StudentDTO> students = new ArrayList<>();
 
         return studentRepo.getAllStudents().stream()
-                .filter(m -> m.getMajor().equals(major))
+                .filter(student -> student.getMajor().equals(major))
+                .map(stu -> {
+                    var stuDto = modelMapper.map(stu,StudentDTO.class);
+                    students.add(stuDto);
+                    return students;
+                })
+                .map(s -> new StudentDTO())
                 .collect(Collectors.toList());
 
     }

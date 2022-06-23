@@ -30,4 +30,7 @@ public class CourseRepo {
     public void save(Course course) {
         courses.add(course);
     }
+    public void createNewCourse(Course course){
+        courses.add(course);
+    }
 }

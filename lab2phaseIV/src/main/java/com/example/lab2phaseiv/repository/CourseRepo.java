@@ -1,6 +1,6 @@
-package com.example.lab2_phaseI.repository;
+package com.example.lab2phaseiv.repository;
 
-import com.example.lab2_phaseI.entity.Course;
+import com.example.lab2phaseiv.entity.Course;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -27,8 +27,10 @@ public class CourseRepo {
         return courses;
     }
 
-
-    public void createNewCourse(Course course) {
+    public void save(Course course) {
+        courses.add(course);
+    }
+    public void createNewCourse(Course course){
         courses.add(course);
     }
 }
