@@ -26,10 +26,4 @@ public class CourseController {
         return courseService.getAllCourse();
     }
 
-    @GetMapping(path = "{id}")
-    public List<CourseDTO> getAllCoursesById(@PathVariable("id") int studentId){
-        return courseService.getCoursesBySudentId(studentId);
-    }
-
-
 }

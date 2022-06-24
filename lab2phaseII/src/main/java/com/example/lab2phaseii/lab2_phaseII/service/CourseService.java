@@ -8,9 +8,8 @@ import java.util.List;
 
 public interface CourseService {
 
-   List<CourseDTO> getCoursesBySudentId(int studentId);
    List<CourseDTO> getAllCourse();
-   void updateById(int id);
-   void deleteById(int id);
+//   void updateById(int id);
+//   void deleteById(int id);
 
 }

@@ -1,7 +1,8 @@
 package com.example.lab2phaseii.lab2_phaseII.controller;
 
 
-import com.example.lab2phaseii.lab2_phaseII.entity.Student;
+import com.example.lab2phaseii.lab2_phaseII.dto.CourseDTO;
+import com.example.lab2phaseii.lab2_phaseII.dto.StudentDTO;
 import com.example.lab2phaseii.lab2_phaseII.service.serviceImpl.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,15 +16,20 @@ import java.util.List;
 @RequestMapping("/students")
 public class StudentController {
 
+    @Autowired
     private final StudentServiceImpl studentService;
 
-    @Autowired
     public StudentController(StudentServiceImpl studentService) {
         this.studentService = studentService;
     }
 
     @GetMapping(path = "/{major}")
-    public List<Student> getAllStudentbyMajor(@PathVariable("major") String major){
+    public List<StudentDTO> getAllStudentbyMajor(@PathVariable("major") String major){
         return studentService.getStudentsByMajor(major);
+    }
+    @GetMapping(path ="/{id}")
+    public List<CourseDTO> findAllCoursesByStudentById(@PathVariable int id){
+        return studentService.getCoursesBySudentId(id);
+
     }
 }
